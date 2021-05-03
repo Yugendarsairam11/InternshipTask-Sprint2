@@ -1,0 +1,11 @@
+.loginbox {
+  background-color: #252c48;
+  width: 750px;
+  height: 500px;
+  border-radius: 20px;
+  padding: 50px;
+  color: white;
+}
+.col > h3 {
+  color: white;
+}

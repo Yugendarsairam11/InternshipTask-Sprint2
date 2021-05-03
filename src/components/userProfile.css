@@ -1,0 +1,69 @@
+.usersidenav{
+    width: 16.5%;
+    /* width: 70%; */
+  margin-left: 0px;
+  margin:0px;
+  background-color: #252c48;
+  padding: 10px;
+  /* margin: 20px; */
+  height: 1050px;
+  border-radius: 0px; 
+}
+.userprofile{
+ display: flex;
+ flex-direction: row;
+}
+.userbody{
+    width: 80%;
+  height: 100px;
+  /* align-items: center; */
+}
+.userbody > form{
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 50px;
+    width: 51%;
+    margin: 0%;
+    border: 1px solid #252c48;
+    margin: 20px;
+    background-color: #252c48;
+    height: 70vh;
+    align-items: center;
+    margin-left: 360px;
+}
+.userbody > h4{
+    margin-left: 220px;
+}
+.col{
+    margin-left: 10px;
+}
+.details{
+    margin-right: 10px;
+    /* /try 1000px// */
+    margin-left: 20px;
+    /* margin-right: 10vh; */  
+
+}
+.main_image{
+    height:100px;
+    width: 100px;
+    clip-path: circle();
+    /* margin-bottom: 20px; */
+    margin-left: 27px;
+    margin-top: 10px;
+    margin-right: 25px;
+}
+.button{
+    align-items: center;
+    margin-right: 9px;
+    margin-top: 50px;
+}
+/* .endimage{
+    height: 75px;
+    width: 90px;
+    clip-path: circle();
+    /* margin-bottom: 20px; */
+    /* margin-left: 1300px;
+    margin-top: -85px;
+    margin-right: 59px;
+} */ 

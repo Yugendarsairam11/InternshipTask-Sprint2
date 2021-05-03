@@ -1,0 +1,11 @@
+.profiledetailsbox{
+    width: 51%;
+  margin: 0%;
+  border: 1px solid #252c48;
+  margin: 20px;
+  background-color: #252c48;
+  height: 150vh;
+  margin-left: 360px;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}

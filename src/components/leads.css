@@ -1,0 +1,32 @@
+.leadsSidenav{
+    width: 16.5%;
+  margin-left: 0px;
+  margin:0px;
+  background-color: #252c48;
+  padding: 10px;
+  /* margin: 20px; */
+  height: 1050px;
+  border-radius: 0px; 
+}
+.leadsbody{
+    cursor: pointer;
+    /* width: 80%; */
+    width: 100%;
+    margin: 0%;
+    border: 1px solid #252c48;
+    margin: 10px;
+    background-color: #252c48;
+    height: 100vh;
+    margin-top: 20px;
+}
+.leads {
+    display: flex;
+    flex-direction: row;
+}
+.button{
+    margin-top: 30px;
+    margin-right: 1050px;
+}
+.search{
+    margin-left: 10px;
+}
