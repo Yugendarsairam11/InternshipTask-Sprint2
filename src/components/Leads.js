@@ -27,18 +27,12 @@ function Leads(props){
         console.log("this are leads from state",leads.length)
     }
     )}
-    const leadsRedirect=(id,image,email,username,number,course,ads,purpose)=>{
-        var obj={
-            id:id,
-            image:image,
-            email:email,
-            username:username,
-            number:number,
-            course:course,
-            ads:ads,
-            purpose:purpose
-        }
-        localStorage.setItem("leadobject",JSON.stringify(obj))
+    const leadsRedirect=(id)=>{
+        axios.get(`http://localhost:9011/lead/getleadbyid/${id}`).then(response=>{
+
+            localStorage.setItem("leadobject",JSON.stringify(response.data[0]))
+        })
+        
         history.push('/userleads')
         alert("working")
     }
@@ -73,7 +67,7 @@ function Leads(props){
         </thead>
 
         <tbody style={{color:'#FFFFFF'}}>
-        {leads.map(lead=><tr  onClick={()=>{leadsRedirect(lead.id,lead.image,lead.email,lead.username,lead.number,lead.course,lead.ads,lead.purpose)}}>
+        {leads.map(lead=><tr  onClick={()=>{leadsRedirect(lead.id)}}>
             <td>{lead.id}</td>
             <td>{lead.username}</td>
             <td>{lead.email}</td>

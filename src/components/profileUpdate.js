@@ -230,31 +230,31 @@ function ProfileUpdate(props){
         {/* </div>  */}
             <br />
             <div class="input-field col s12">
-            <input  id="image" type="text" name="image" onChange={captureData} ref={imageref} />
+            <input style={{color:'white'}} id="image" type="text" name="image" onChange={captureData} ref={imageref} />
             <label class="active" for="image"><b>Image URL</b></label>
             {/* <span ref={imageref}></span> */}
         </div>
             <br />
             <div class="input-field col s12">
-            <input  id="emailId" type="text" name="email" onChange={captureData} ref={emailref} disabled />
+            <input style={{color:'white'}} id="emailId" type="text" name="email" onChange={captureData} ref={emailref} disabled />
             <label class="active" for="emailId"><b>Email</b></label>
             {/* <span ref={emailref}></span> */}
         </div>
             <br/>
             <div class="input-field col s12">
-            <input  id="emailId" type="text" name="username" onChange={captureData} ref={userref} />
+            <input style={{color:'white'}} id="emailId" type="text" name="username" onChange={captureData} ref={userref} />
             <label class="active" for="username"><b>Username</b></label>
             {/* <span ref={userref}></span> */}
         </div>
             <br/>
             <div class="input-field col s12">
-            <input  id="emailId" type="text" name="number" onChange={captureData} ref={numberref} />
+            <input style={{color:'white'}} id="emailId" type="text" name="number" onChange={captureData} ref={numberref} />
             <label class="active" for="username"><b>Mobile Number</b></label>
             {/* <span ref={numberref}></span> */}
         </div>
             <br/>
             <div class="input-field col s12">
-            <input  id="emailId" type="text" name="course" onChange={captureData} ref={locationref} />
+            <input style={{color:'white'}} id="emailId" type="text" name="course" onChange={captureData} ref={locationref} />
             <label class="active" for="username"><b>Location</b></label>
             {/* <span ref={courseref}></span> */}
         </div>

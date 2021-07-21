@@ -1,0 +1,190 @@
+.image{
+    height: 55px;
+    width: 90px;
+    clip-path: circle();
+    /* margin-bottom: 20px; */
+    margin-left: 64px;
+    margin-top: -10px;
+    margin-right: 59px;
+    display: flex;
+    flex-direction: column;
+}
+.checklist{
+    top: 198px;
+  left: 426px;
+  width: 1180px;
+  height: 324px;
+  background: var(--unnamed-color-252c48) 0% 0% no-repeat padding-box;
+  background: #1B203A 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.checklist-details{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+}
+.checklist-details > h6{
+    margin-left: -65px;
+}
+.checklist > h5{
+    /* margin-left: 30px;
+    margin-top: 30px; */
+    /* font: normal normal 300 18px/31px Poppins; */
+    /* text-align: left; */
+    /* color: 'e9204f' */
+    margin-top: 2px;
+    margin-left: 30px;
+    top: 963px;
+left: 626px;
+width: 52px;
+height: 31px;
+color: var(--unnamed-color-e9204f);
+text-align: left;
+font: normal normal medium 22px/31px Poppins;
+letter-spacing: 0px;
+color: #E9204F;
+opacity: 1;
+}
+
+.checklist > p{
+    top: 1009px;
+left: 626px;
+width: 1062px;
+height: 180px;
+/* margin-top: 70px; */
+/* margin-left: -73px; */
+text-align: left;
+color: var(--unnamed-color-fefefe);
+font: normal normal 200 16px/31px Poppins;
+letter-spacing: 0px;
+color: #FEFEFE;
+opacity: 1;
+margin-left: 85px;
+margin-top: -20px;
+/* margin-right: -40px; */
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+}
+.checklist > h6{
+    display: flex;
+    flex-direction: row;
+    margin-left: -35px;
+    text-align: left;
+    margin-bottom: 15px;
+    /* justify-content: space-between; */
+    /* margin-right: 90px;  */
+}
+
+.button_new{
+    margin-left: 850px;
+    top: 814px;
+left: 1605px;
+width: 165px;
+height: 41px;
+background: var(--unnamed-color-e9204f) 0% 0% no-repeat padding-box;
+border: 0.5px solid var(--unnamed-color-e9204f);
+background: #E9204F 0% 0% no-repeat padding-box;
+border: 0.5px solid #E9204F;
+color: whitesmoke;
+border-radius: 8px;
+opacity: 1;
+margin-top: 40px;
+    /* top: 823px;
+left: 1638px;
+width: 99px;
+height: 23px;
+color: var(--unnamed-color-fefefe);
+text-align: left;
+font: normal normal 300 16px/24px Poppins;
+letter-spacing: 0.32px;
+color: #FEFEFE;
+opacity: 1; */
+}  
+.radio_buttons{
+    display: flex;
+    flex-direction: column;
+} 
+.checkbox{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding-left: 30px;
+    justify-content: space-around;
+    margin-left: -900px;
+    text-align: left;
+    display: inline-table;
+  /* width: 16px; */
+  /* height: 16px; */
+  /* border-radius: 3px; */
+  /* transition: all 150ms; */
+}
+.modal-wrapper{
+    background-color: #1B203A;
+    width: 100% !important;
+    /* max-width: 800px; */
+    object-fit: contain;
+    padding: 0px;
+    height: 300px;
+    /* margin: 4rem auto; */
+}
+.modal-header{
+    background: #E9204F;
+    color: #e9e9e9;
+    /* padding: 1rem; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal-header > p{
+    margin-top: 11px;
+    margin-left: 5px;
+    text-align: left;
+}
+.modal-header > span{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.modal-content{
+    /* padding: 1.5rem 1rem; */
+}
+.modal-body{
+    /* margin-bottom: 1rem; */
+    /* background: #1B203A; */
+    background-color: #1B203A;
+    height: 300px;
+    object-fit: contain;
+}
+.modal-body > h4{
+    font-size: 1.8rem;
+    color: #dd501d;
+}
+.modal-body > p{
+    /* font-size: 1rem;
+    background: #eee;
+    color: #333;
+    padding: 1rem;
+    margin: 1rem 0 2rem; */
+    color: whitesmoke;
+}
+.modal-footer > button{
+    display: block;
+    /* font-size: 1rem; */
+    margin-left: auto;
+    padding: 0.5rem 1.8rem;
+    background: #E9204F;
+    color: #fff;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.modal-footer{
+    background-color: #1B203A;
+}

@@ -41,12 +41,12 @@ function Login() {
                     <h5>SignIn</h5>
                         <br /><br />
                     <div className="input-field col s12">
-                        <input  id="emailId" type="text" name="emailId" onChange={capture}/>
+                        <input style={{color:'white'}} id="emailId" type="text" name="emailId" onChange={capture}/>
                         <label class="active" for="emailId">EmailId</label>
                     </div>
                         <br/><br/><br/><br/>
                     <div className="input-field col s12">
-                        <input  id="password" type="password" name="password" onChange={capture}/>
+                        <input style={{color:'white'}} id="password" type="password" name="password" onChange={capture}/>
                         <label className="active" for="password">Password</label>
                     </div>
                     <br/><br/><br/><br/><br/><br/>

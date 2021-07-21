@@ -45,6 +45,7 @@ function App() {
     <Route path="/activities" component={Activities} />
     <Route path="/checklist" component={Checklist} />
     <Route path="/emails" component={Emails} />
+    <Route path="/note" component={Notes} />
     </HashRouter>
     </div>
 

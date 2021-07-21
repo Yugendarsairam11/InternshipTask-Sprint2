@@ -8,6 +8,11 @@ import { leaddelete } from '../actions/user.deleteLead'
 import {leadUpdate} from '../actions/user.updateLead'
 import Leads from './Leads'
 import SearchComponent from './searchComponent'
+import Notes from '../components/Notes'
+import Activities from '../components/Activities'
+import Tasks from '../components/Tasks'
+import Checklist from '../components/Checklist'
+import axios from 'axios'
 
 function LeadData(props){
     console.log("the data initially is ",useSelector((state) => state.userData.isLeadDelete))
@@ -15,10 +20,25 @@ function LeadData(props){
 
     const dispatch=useDispatch()
     const history=useHistory()
-    const [userLead,setUserLead]=useState({})
+    const [leadData,setleadData]=useState({})
+    const [state,setstate]=useState('')
+    const [user,setuser]=useState({})
+    const [owner,setowner]=useState('')
+    const [activities,setactivities]=useState(false)
+    const [notes,setnotes]=useState(false)
+    const [tasks,settasks]=useState(false)
+    const [checklist,setchecklist]=useState(false)
     useEffect(()=>{
-        setUserLead(JSON.parse(localStorage.getItem('leadobject')))
+        console.log("this is from local storage",(JSON.parse(localStorage.getItem('leadobject'))))
+        var obj=JSON.parse(localStorage.getItem('leadobject'))  
+        setleadData(obj)   
+        console.log("this is user lead",obj)
+       
+        setstate(JSON.parse(localStorage.getItem('userdetails')))
+        setowner(localStorage.getItem("emailId"))
     },[])
+    
+    
     const updateLead=()=>{
         props.history.push('/leaddetailsupdate')
         // var obj=JSON.parse(localStorage.getItem("leadobject"))
@@ -37,6 +57,35 @@ function LeadData(props){
         }
 
     }
+    const changeActivities=()=>{
+      setactivities(true)
+      settasks(false)
+      setnotes(false)
+      setchecklist(false)
+    }
+    const changeTasks=()=>{
+      setactivities(false)
+      settasks(true)
+      setnotes(false)
+      setchecklist(false)
+    }
+    const changeNotes=()=>{
+      setactivities(false)
+      settasks(false)
+      setnotes(true)
+      setchecklist(false)
+    }
+    const changeChecklist=()=>{
+      setactivities(false)
+      settasks(false)
+      setnotes(false)
+      setchecklist(true)
+    }
+    
+    // const getUser=()=>{
+    //   var obj={username:"Sachin Chandra"}
+    //   axios.post("http://localhost:9011/user/getuserbychoice",obj).then((response)=>setuser(response.data))
+    // }
     return(
         <div>
         {/* <h1>{emailId}</h1> */}
@@ -53,26 +102,36 @@ function LeadData(props){
                 
                 <div className="col">
                 <SearchComponent />
-                <img className="endimage" src={userLead.image}  ></img>
+                <img className="endimage" src={leadData.image}  ></img>
                     
                 </div>
             <h4>Lead Profile</h4>
             <form>
             <div className="leadsdata">
             <div className="col">
-                <img className="main_image" src={userLead.image}  ></img>
-                <div></div>
-                    <h5>{userLead.username}</h5>
-                    <hr></hr>
+              <div className="row-0">
+                <img className="main_image" src={leadData.image}  ></img>
+                    <h5>{leadData.username}</h5>
+                    <br />
+                    {/* <h5>ID:{userLead.id}</h5> */}
                     </div>
-        <h5>ID:{userLead.id}</h5>
+                    {/* <hr></hr> */}
+                    </div>
+        
         {/* <img src={userLead.image}></img> */}
-        <h5>Username: {userLead.username}</h5>
-         <h5>Email: {userLead.email}</h5>
-         <h5>Number: {userLead.number}</h5>
-         <h5>Course: {userLead.course}</h5>
-         <h5>Ads: {userLead.ads}</h5>
-         <h5>Purpose: {userLead.purpose}</h5>
+        <div className="row-1">
+        {/* <h5>Username: {userLead.username}</h5> */}
+         <h5>Email: {leadData.email}</h5>
+         <h5>Number: {leadData.number}</h5>
+         </div>
+         <div className="row-2">
+         <h5 style={{marginLeft:'20px'}}>Course: {leadData.course}</h5>
+         <h5>Ads: {leadData.ads}</h5>
+         {/* <h5>Purpose: {userLead.purpose}</h5> */}
+         </div>
+         <div className="row-3">
+            <h5>Lead Owner: {owner}</h5>
+         </div>
          </div>
          <hr />
          <div className="buttons">
@@ -84,26 +143,44 @@ function LeadData(props){
         </div>
         </div>
         <hr />
+        <div className="row-4">
+        <h5>Lead Stage:</h5>
+        <br />
+        <div className="rowdata">
+        <h6>New</h6>
+        <h6>CBNB</h6>
+        <h6>Call Back</h6>
+        <h6>Follow Up 1</h6>
+        <h6>Dead Lead</h6>
+        <h6>Invalid Number</h6>
+        <h6>Registered</h6>
+        </div>
+         </div>
         <div className= "components">
-        <ul class="nav nav-tabs">
+        <ul className="nav nav-tabs">
   <li class="nav-item">
-    <NavLink class="nav-link active" to="/activities" href="#">ACTIVITIES</NavLink>
+    <p class="nav-link " onClick={changeActivities} >ACTIVITIES</p>
   </li>
   <li class="nav-item">
-    <NavLink class="nav-link" to="/notes" href="#">NOTES</NavLink>
+    <p class="nav-link" onClick={changeNotes}>NOTES</p>
   </li>
   <li class="nav-item">
-    <NavLink class="nav-link" to="/tasks" href="#">TASKS</NavLink>
+    <p class="nav-link" onClick={changeTasks}>TASKS</p>
   </li>
   <li class="nav-item">
-    <NavLink class="nav-link" to="/checklist" href="#">CHECKLIST</NavLink>
+    <p class="nav-link" onClick={changeChecklist}>CHECKLIST</p>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#">EMAILS</a>
+    <p class="nav-link " >EMAILS</p>
   </li>
 </ul>
 </div>
-        
+        {activities?<Activities />:null}                
+        {notes?<Notes leadId={leadData.id} />:null}
+        {console.log("this is lead data")}
+        {console.log("this is lead data")}
+        {tasks?<Tasks leadId={leadData.id} />:null}
+        {checklist?<Checklist leadId={leadData.id} />:null}
         </form>
         
             </div>

@@ -265,43 +265,43 @@ function LeadDetailsUpdate(props){
         {/* </div>  */}
             <br />
             <div class="input-field col s12">
-            <input  id="image" type="text" name="image" onChange={captureData} ref={imageref} />
+            <input style={{color:'white'}} id="image" type="text" name="image" onChange={captureData} ref={imageref} />
             <label class="active" for="image"><b>Image URL</b></label>
             {/* <span ref={imageref}></span> */}
         </div>
             <br />
             <div class="input-field col s12">
-            <input  id="emailId" type="text" name="email" onChange={captureData} ref={emailref} />
+            <input style={{color:'white'}} id="emailId" type="text" name="email" onChange={captureData} ref={emailref} />
             <label class="active" for="emailId"><b>Email</b></label>
             {/* <span ref={emailref}></span> */}
         </div>
             <br/>
             <div class="input-field col s12">
-            <input  id="emailId" type="text" name="username" onChange={captureData} ref={userref} />
+            <input style={{color:'white'}} id="emailId" type="text" name="username" onChange={captureData} ref={userref} />
             <label class="active" for="username"><b>Username</b></label>
             {/* <span ref={userref}></span> */}
         </div>
             <br/>
             <div class="input-field col s12">
-            <input  id="emailId" type="text" name="number" onChange={captureData} ref={numberref} />
+            <input style={{color:'white'}} id="emailId" type="text" name="number" onChange={captureData} ref={numberref} />
             <label class="active" for="username"><b>Mobile Number</b></label>
             {/* <span ref={numberref}></span> */}
         </div>
             <br/>
             <div class="input-field col s12">
-            <input  id="emailId" type="text" name="course" placeholder="UI/UX" onChange={captureData} ref={courseref} />
+            <input style={{color:'white'}} id="emailId" type="text" name="course" placeholder="UI/UX" onChange={captureData} ref={courseref} />
             <label class="active" for="username"><b>Course</b></label>
             {/* <span ref={courseref}></span> */}
         </div>
             <br/>
             <div class="input-field col s12">
-            <input  id="emailId" type="text" name="ads" placeholder="Google Ads/ Microsoft Ads" onChange={captureData} ref={adsref} />
+            <input style={{color:'white'}}  id="emailId" type="text" name="ads" placeholder="Google Ads/ Microsoft Ads" onChange={captureData} ref={adsref} />
             <label class="active" for="username"><b>Ads</b></label>
             {/* <span ref={adsref}></span> */}
         </div>
             <br/>
             <div class="input-field col s12">
-            <input  id="emailId" type="text" name="purpose" placeholder="Demo/Enroll" onChange={captureData} ref={purposeref} />
+            <input style={{color:'white'}} id="emailId" type="text" name="purpose" placeholder="Demo/Enroll" onChange={captureData} ref={purposeref} />
             <label class="active" for="username"><b>Purpose</b></label>
             {/* <span ref={purposeref}></span> */}
         </div>

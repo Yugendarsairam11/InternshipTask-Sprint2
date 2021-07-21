@@ -156,36 +156,36 @@ function Register() {
                 <br /><br />
                 <span ref={formMessage} ></span>
             <div className="input-field col s12">
-                <input  id="emailId" type="text" name="emailId" onBlur={validateEmailField}/>
+                <input style={{color:'white'}} id="emailId" type="text" name="emailId" onBlur={validateEmailField}/>
                 <span ref={emailIdRef}></span>
                 <label className="active" >EmailId</label>
             </div>
                 <br/><br/><br/><br/>
                 <div className="input-field col s12">
-                <input  id="number" type="text" name="emailId" onChange={numberValidation} />
+                <input style={{color:'white'}} id="number" type="text" name="emailId" onChange={numberValidation} />
                 <span ref={numberref}></span>
                 <label className="active" >Mobile Number</label>
             </div>
                 <br/><br/><br/><br/>
                 <div className="input-field col s12">
-                <input  id="location" type="text" name="location" onChange={locationData} />
+                <input style={{color:'white'}} id="location" type="text" name="location" onChange={locationData} />
                 <label className="active" >Location</label>
                 <span ></span>
             </div>
                 <br/><br/><br/><br/>
                 <div className="input-field col s12">
-                <input  id="username" type="text" onChange={validateUsername} />
+                <input style={{color:'white'}} id="username" type="text" onChange={validateUsername} />
                 <span ref={usernameRef} style={{color:"tomato"}}></span>
                 <label className="active" >Username</label>
             </div>
                 <br/><br/><br/><br/>
             <div className="input-field col s12">
-                <input  id="password" type="password" onChange={validatePassword} />
+                <input style={{color:'white'}} id="password" type="password" onChange={validatePassword} />
                 <span ref={passwordRef}></span>
                 <label className="active">Password</label>
             </div>
             <div className="input-field col s12">
-                <input  id="image" type="text" onBlur={imageValidation} />
+                <input style={{color:'white'}} id="image" type="text" onBlur={imageValidation} />
                 <label className="active">Image URL</label>
                 <span ref={imageref}></span>
             </div>
